@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 620" role="img" aria-label="Route: Punta Arenas to King George Island, yacht to Antarctic Peninsula, return via Ushuaia and Buenos Aires">
+  <defs>
+    <style>
+      .bg { fill: #0a1628; }
+      .land { fill: #152638; stroke: rgba(168,196,217,0.18); stroke-width: 1; }
+      .label { fill: #e8f1f8; font: 500 11px 'DM Sans', system-ui, sans-serif; letter-spacing: 0.04em; }
+      .sublabel { fill: #a8c4d9; font: 400 9px 'DM Sans', system-ui, sans-serif; }
+      .dot { fill: #c9a962; }
+      .flight { fill: none; stroke: #7ee8ff; stroke-width: 2; stroke-dasharray: 7 5; stroke-linecap: round; }
+      .yacht { fill: none; stroke: #c9a962; stroke-width: 2.2; stroke-linecap: round; }
+    </style>
+    <marker id="arrow-flight" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#7ee8ff"/>
+    </marker>
+    <marker id="arrow-yacht" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#c9a962"/>
+    </marker>
+    <symbol id="plane" viewBox="0 0 24 24">
+      <path fill="#7ee8ff" d="M20.5 13.5L18 12l1.2-4.8a1 1 0 0 0-.6-1.1l-1-.3a1 1 0 0 0-1.2.7L15.4 10 9 7.5 9.8 5a1 1 0 0 0-.3-1.1l-.7-.5a1 1 0 0 0-1.2.2L5.6 6.2 2.8 5.5a1 1 0 0 0-1.1 1.4l2.2 3.6-2.2 3.6a1 1 0 0 0 1.1 1.4l2.8-.7 2-2.6a1 1 0 0 0 1.2.2l.7-.5a1 1 0 0 0 .3-1.1L9 16.5l6.4-2.5 1-3.5a1 1 0 0 0 1.2.7l1 .3a1 1 0 0 0 .6-1.1L18 12l2.5-1.5a1 1 0 0 0 0-1.7z"/>
+    </symbol>
+  </defs>
+
+  <rect class="bg" width="420" height="620"/>
+
+  <!-- South America -->
+  <path class="land" d="M60,30 C120,20 200,25 280,40 C340,55 360,100 350,150 C345,190 320,220 280,240 C240,255 180,250 130,230 C90,210 55,170 50,120 C48,80 55,45 60,30Z"/>
+  <!-- Antarctic Peninsula -->
+  <path class="land" d="M140,430 C180,410 240,405 290,420 C330,435 350,470 340,510 C320,560 260,590 210,580 C160,570 120,540 110,500 C105,465 115,445 140,430Z"/>
+  <!-- King George hint -->
+  <ellipse class="land" cx="195" cy="355" rx="28" ry="12"/>
+
+  <!-- Routes: yacht -->
+  <path class="yacht" marker-end="url(#arrow-yacht)" d="M195,367 C200,400 210,430 220,455"/>
+  <path class="yacht" marker-end="url(#arrow-yacht)" d="M220,470 C210,420 205,360 215,310 C220,280 215,255 205,245"/>
+
+  <!-- Routes: flights -->
+  <path class="flight" marker-end="url(#arrow-flight)" d="M285,88 C220,110 150,150 125,195"/>
+  <use href="#plane" x="188" y="118" width="16" height="16" transform="rotate(-25 196 126)"/>
+
+  <path class="flight" marker-end="url(#arrow-flight)" d="M125,205 C130,250 150,300 175,340"/>
+  <use href="#plane" x="138" y="258" width="16" height="16" transform="rotate(70 146 266)"/>
+
+  <path class="flight" marker-end="url(#arrow-flight)" d="M205,240 C250,200 290,150 295,95"/>
+  <use href="#plane" x="258" y="155" width="16" height="16" transform="rotate(-40 266 163)"/>
+
+  <!-- Labels -->
+  <circle class="dot" cx="285" cy="82" r="4"/><text class="label" x="295" y="86">Buenos Aires</text>
+  <circle class="dot" cx="122" cy="198" r="4"/><text class="label" x="62" y="202">Punta Arenas</text>
+  <circle class="dot" cx="205" cy="242" r="4"/><text class="label" x="215" y="246">Ushuaia</text>
+  <circle class="dot" cx="195" cy="352" r="4"/><text class="label" x="130" y="348">King George Island</text>
+  <circle class="dot" cx="225" cy="468" r="4"/><text class="label" x="235" y="472">Antarctic Peninsula</text>
+
+  <!-- Legend -->
+  <line class="flight" x1="36" y1="575" x2="86" y2="575"/>
+  <text class="sublabel" x="94" y="579">Charter / private flight</text>
+  <line class="yacht" x1="36" y1="598" x2="86" y2="598"/>
+  <text class="sublabel" x="94" y="602">Yacht / sailing</text>
+</svg>

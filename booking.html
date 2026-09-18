@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking — Polar Meridian</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header scrolled">
+  <div class="header-inner">
+    <a href="index.html" class="logo">Polar <span>Meridian</span></a>
+    <button class="menu-toggle" aria-label="Menu">☰</button>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="yacht.html">Our Yacht</a></li>
+        <li><a href="crew.html">Our Crew</a></li>
+        <li><a href="expeditions.html">Expeditions</a></li>
+        <li><a href="the-landing.html" class="nav-landing">The Landing</a></li>
+        <li><a href="booking-quiz.html" class="nav-quiz">Booking Quiz</a></li>
+        <li><a href="booking.html" class="nav-cta active">Reserve</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero-small">
+  <div class="container">
+    <p class="hero-eyebrow">Antarctica Expedition</p>
+    <h1>Booking</h1>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-header">
+      <div class="divider"></div>
+      <h2>For Antarctica: Choose Options</h2>
+    </div>
+
+    <div class="option-block open">
+      <div class="option-header">
+        <span>Skip Drake Strait (Fly & Cruise)</span>
+        <span class="option-toggle">▼</span>
+      </div>
+      <div class="option-body">
+        <p class="fly-cruise-intro" style="text-align: left; margin: 0 0 32px;">Although the Drake Passage is an experience in itself, it is quite rough and might want to be avoided by people who are put off by the thought of constant motion. The seas around the peninsula are generally much calmer and the boat will be far more manageable for people with sea sickness tendencies.</p>
+
+        <div class="route-option">
+          <h3>Punta Arenas → King George Island → Ushuaia → Buenos Aires</h3>
+          <p class="route-desc">Fly Punta Arenas to King George Island in partnership with <em>DAP Airlines</em>, then sail to Ushuaia and continue to Buenos Aires by private jet charter. Two nights of stay in Punta Arenas (in case of flight delay due to weather) and one night of stay in Buenos Aires are included.</p>
+          <div class="route-map">
+            <img src="images/route-punta-ushuaia.png" alt="Route map: Punta Arenas to King George Island, yacht to Ushuaia, private jet to Buenos Aires">
+          </div>
+        </div>
+
+        <div class="route-option">
+          <h3>Buenos Aires → Ushuaia → King George Island → Punta Arenas</h3>
+          <p class="route-desc">Fly Buenos Aires to Ushuaia, sail to King George Island, then return to Punta Arenas by air with <em>DAP Airlines</em>. One night of stay in Buenos Aires and one night in Punta Arenas are included.</p>
+          <div class="route-map">
+            <img src="images/route-buenos-ushuaia.png" alt="Route map: Buenos Aires to Ushuaia, yacht to King George Island, flight to Punta Arenas">
+          </div>
+        </div>
+
+        <div class="route-option">
+          <h3>Total Fly & Cruise</h3>
+          <p class="route-desc">Punta Arenas ↔ King George Island roundtrip by air. Join the yacht at King George Island and explore the Antarctic Peninsula without crossing the Drake Passage at all.</p>
+          <div class="route-map">
+            <img src="images/route-total-fly-cruise.png" alt="Route map: Punta Arenas to King George Island roundtrip flight, yacht to Antarctic Peninsula">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="addon-block">
+      <h3>Vinson Massif Day Trip (4,200 m)</h3>
+      <p>Add an airplane day roundtrip to the base of the highest peak of Antarctica — Vinson Massif (4,200 m), in partnership with <em>Antarctica Logistics & Expeditions (ALE)</em>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-frost" id="waitlist">
+  <div class="container">
+    <div class="section-header">
+      <div class="divider"></div>
+      <h2>Choose Your Tier</h2>
+      <p>Join the waitlist for free, or secure your place with a deposit.</p>
+    </div>
+
+    <div class="booking-tiers">
+      <div class="tier-card">
+        <p class="tier-name">Waitlist</p>
+        <p class="tier-deposit">$0</p>
+        <p class="tier-terms">—</p>
+        <ul class="tier-benefits">
+          <li>Priority notifications on dates</li>
+          <li>Updates on expedition preparedness</li>
+        </ul>
+        <a href="#reserve-form" data-tier="waitlist" class="btn btn-dark tier-select-btn" style="width: 100%; text-align: center;">Join Waitlist</a>
+      </div>
+      <div class="tier-card">
+        <p class="tier-name">Soft Reserve</p>
+        <p class="tier-deposit">$500</p>
+        <p class="tier-terms">Fully refundable anytime</p>
+        <ul class="tier-benefits">
+          <li>All waitlist benefits</li>
+          <li>Your name secured by personal manager</li>
+          <li>Flexible dates</li>
+        </ul>
+        <a href="#reserve-form" data-tier="soft" class="btn btn-dark tier-select-btn" style="width: 100%; text-align: center;">Soft Reserve</a>
+      </div>
+      <div class="tier-card featured">
+        <p class="tier-name">Hard Reserve</p>
+        <p class="tier-deposit">15%</p>
+        <p class="tier-terms">Non-refundable if you cancel after 180 days prior to departure. Fully refundable if trip cancelled by operator due to any reason except weather.</p>
+        <ul class="tier-benefits">
+          <li>All soft reserve benefits</li>
+          <li>Price lock*</li>
+          <li>Guaranteed spot</li>
+          <li>Priority cabin selection</li>
+          <li>Flexible dates</li>
+        </ul>
+        <a href="#reserve-form" data-tier="hard" class="btn btn-primary tier-select-btn" style="width: 100%; text-align: center;">Hard Reserve</a>
+      </div>
+    </div>
+    <p class="policy-note">*Cost of the journey may be subject to increase unless you made a hard reserve.</p>
+  </div>
+</section>
+
+<section id="reserve-form">
+  <div class="container">
+    <div class="booking-form-wrap">
+      <h2>Reserve Your Place</h2>
+      <p class="booking-form-intro">Choose how you'd like to join — waitlist is free, or secure your spot with a deposit.</p>
+
+      <form data-form id="booking-form">
+        <div class="tier-picker" role="radiogroup" aria-label="Reserve tier">
+          <div>
+            <input type="radio" name="tier" id="tier-waitlist" value="waitlist" checked>
+            <label for="tier-waitlist">
+              <span class="picker-name">Waitlist</span>
+              <span class="picker-price">$0</span>
+              <span class="picker-note">No commitment</span>
+            </label>
+          </div>
+          <div>
+            <input type="radio" name="tier" id="tier-soft" value="soft">
+            <label for="tier-soft">
+              <span class="picker-name">Soft Reserve</span>
+              <span class="picker-price">$500</span>
+              <span class="picker-note">Fully refundable</span>
+            </label>
+          </div>
+          <div>
+            <input type="radio" name="tier" id="tier-hard" value="hard">
+            <label for="tier-hard">
+              <span class="picker-name">Hard Reserve</span>
+              <span class="picker-price">15%</span>
+              <span class="picker-note">Price lock & guaranteed spot</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" required placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" required placeholder="you@email.com">
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" placeholder="+1 ...">
+        </div>
+        <div class="form-group">
+          <label>Fly & Cruise Option</label>
+          <select>
+            <option>Not selected</option>
+            <option>Punta Arenas → King George → Ushuaia → Buenos Aires</option>
+            <option>Buenos Aires → Ushuaia → King George → Punta Arenas</option>
+            <option>Total Fly & Cruise (Punta Arenas roundtrip)</option>
+            <option>Sail Drake Passage (no fly)</option>
+          </select>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="vinson">
+          <label for="vinson" style="text-transform: none; font-weight: 400; letter-spacing: 0;">Add Vinson Massif day trip</label>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea rows="3" placeholder="Preferred dates, questions..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" id="booking-submit" style="width: 100%;">Join Waitlist — Free</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section-frost">
+  <div class="container">
+    <div class="section-header">
+      <div class="divider"></div>
+      <h2>What Happens Next</h2>
+    </div>
+    <p style="max-width: 720px; margin: 0 auto 32px; color: var(--muted); line-height: 1.75;">After you join the waitlist or leave a deposit, our managers will connect with you, keep you updated about the upcoming journey, and eventually will establish the expedition dates for you. Full payment will be required after manager's confirmation and not later than 120 days before the scheduled expedition.</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Tier</th>
+          <th>Deposit</th>
+          <th>Terms</th>
+          <th>What You Get</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Waitlist</td>
+          <td>$0</td>
+          <td>—</td>
+          <td>Priority notifications on dates and states of preparedness of upcoming expeditions</td>
+        </tr>
+        <tr>
+          <td>Soft Reserve</td>
+          <td>$500</td>
+          <td>Fully refundable anytime</td>
+          <td>All above plus your name secured by personal manager, flexible dates</td>
+        </tr>
+        <tr>
+          <td>Hard Reserve</td>
+          <td>15% of trip cost</td>
+          <td>Non-refundable if you cancel after 180 days prior to departure. Fully refundable if trip cancelled by operator due to any reason except weather.</td>
+          <td>All above plus price lock*, guaranteed spot, priority cabin selection, flexible dates</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="font-family: var(--font-serif); font-size: 1.6rem; margin: 48px 0 16px; text-align: center;">Cancellation Policy (After Full Payment)</h3>
+    <p style="max-width: 720px; margin: 0 auto 24px; color: var(--muted); text-align: center;">If you cancel:</p>
+    <div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="feature-card">
+        <h3>Before 180 Days</h3>
+        <p>100% refund.</p>
+      </div>
+      <div class="feature-card">
+        <h3>180 – 120 Days</h3>
+        <p>85% refund (we keep the hard reserve deposit amount).</p>
+      </div>
+      <div class="feature-card">
+        <h3>Less Than 120 Days</h3>
+        <p>No refund issued.</p>
+      </div>
+    </div>
+    <p style="margin-top: 32px; color: var(--muted); font-size: 0.95rem; line-height: 1.7; max-width: 720px; margin-left: auto; margin-right: auto;">In case we have to cancel or reschedule due to any reason except weather, we propose alternate dates and if it doesn't work for you, you receive the full refund anytime.</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand">Polar <span>Meridian</span></p>
+        <p>Boutique polar expeditions aboard Bering 88.</p>
+      </div>
+      <div>
+        <ul class="footer-links">
+          <li><a href="yacht.html">Our Yacht</a></li>
+          <li><a href="crew.html">Our Crew</a></li>
+          <li><a href="expeditions.html">Expeditions</a></li>
+          <li><a href="booking.html">Reserve</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul class="footer-links">
+          <li><a href="mailto:expeditions@polarmeridian.com">expeditions@polarmeridian.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Polar Meridian Expeditions. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

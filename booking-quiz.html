@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Quiz | Polar Meridian</title>
+  <meta name="description" content="Design your Antarctic expedition step by step.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/booking-quiz.css">
+</head>
+<body class="quiz-body">
+
+<nav class="quiz-nav">
+  <a href="index.html" class="quiz-logo">Polar Meridian</a>
+  <a href="booking.html" class="quiz-back">← Classic booking</a>
+</nav>
+
+<div class="quiz-wrap">
+  <header class="quiz-intro">
+    <p class="chapter">Expedition Builder</p>
+    <h1>Plan your crossing</h1>
+    <p>Choose how you reach the ice, what you want on the voyage, and how you want to reserve. We take it from there.</p>
+  </header>
+
+  <div id="quiz-stage">
+  <div class="quiz-steps-bar" aria-hidden="true">
+    <div class="quiz-step-dot active"><span></span></div>
+    <div class="quiz-step-dot"><span></span></div>
+    <div class="quiz-step-dot"><span></span></div>
+  </div>
+
+  <div class="experience-box" id="experience-box">
+    <p id="experience-text"></p>
+  </div>
+
+  <form class="quiz-form" id="quiz-form">
+    <!-- STEP 1: Drake -->
+    <div class="quiz-panel active" data-step="0">
+      <p class="quiz-panel-label">Step 1 · The crossing</p>
+      <h2>How do you want to cross the Drake?</h2>
+      <p class="lead">Sail from Ushuaia, or fly part of the way with DAP Airlines. Same yacht either way.</p>
+
+      <div class="choice-list choice-list--routes">
+        <label class="choice-card choice-card--sail">
+          <input type="radio" name="drake" value="sail">
+          <span class="choice-inner">
+            <span class="choice-title">Sail the Drake Passage</span>
+            <span class="choice-flavor">Three days from Ushuaia. Open ocean, albatross, and the usual Drake motion. <em>You meet the peninsula the way most expeditions still do.</em></span>
+          </span>
+        </label>
+
+        <div class="choice-list choice-list--fly-routes">
+          <label class="choice-card choice-card--route">
+            <input type="radio" name="drake" value="punta">
+            <span class="choice-inner">
+              <span class="choice-title">Punta Arenas → King George → Ushuaia → Buenos Aires</span>
+              <span class="choice-flavor">Fly the Drake with DAP Airlines. <em>Starboard window over the Andes. Up to two nights in Punta Arenas if weather holds the flight.</em></span>
+              <span class="choice-map"><img src="images/route-punta-ushuaia.png" alt="Punta Arenas route map"></span>
+            </span>
+          </label>
+
+          <label class="choice-card choice-card--route">
+            <input type="radio" name="drake" value="buenos">
+            <span class="choice-inner">
+              <span class="choice-title">Buenos Aires → Ushuaia → King George → Punta Arenas</span>
+              <span class="choice-flavor">One night in Buenos Aires, then south to Ushuaia to board. <em>Return by air from King George to Punta Arenas.</em></span>
+              <span class="choice-map"><img src="images/route-buenos-ushuaia.png" alt="Buenos Aires route map"></span>
+            </span>
+          </label>
+
+          <label class="choice-card choice-card--route">
+            <input type="radio" name="drake" value="total">
+            <span class="choice-inner">
+              <span class="choice-title">Total Fly & Cruise</span>
+              <span class="choice-flavor">Punta Arenas ↔ King George roundtrip by air. No Drake. <em>Yacht waits at the ice. Calm boarding, first landing sooner.</em></span>
+              <span class="choice-map"><img src="images/route-total-fly-cruise.png" alt="Total fly and cruise route map"></span>
+            </span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 2: Cruise -->
+    <div class="quiz-panel" data-step="1">
+      <p class="quiz-panel-label">Step 2 · The voyage</p>
+      <h2>What do you want on board?</h2>
+      <p class="lead">The peninsula programme is included. Tick anything extra, or leave it blank and we plan around weather and ice.</p>
+
+      <div class="choice-list">
+        <label class="choice-card multi">
+          <input type="checkbox" name="cruise" value="vinson" data-label="Vinson Massif day flight">
+          <span class="choice-inner">
+            <span class="choice-title">Vinson Massif, 4,200 m</span>
+            <span class="choice-flavor">Day flight with ALE to the base camp below Antarctica's highest peak. <em>Ellsworth Mountains from the air.</em></span>
+          </span>
+        </label>
+
+        <label class="choice-card multi">
+          <input type="checkbox" name="cruise" value="kayak" data-label="Kayak among icebergs">
+          <span class="choice-inner">
+            <span class="choice-title">Kayak programme</span>
+            <span class="choice-flavor">Paddle between floes when conditions allow. <em>Low to the water, slow, and very quiet.</em></span>
+          </span>
+        </label>
+
+        <label class="choice-card multi">
+          <input type="checkbox" name="cruise" value="huts" data-label="Historic explorer huts">
+          <span class="choice-inner">
+            <span class="choice-title">Shackleton & Scott's huts</span>
+            <span class="choice-flavor">Cape Royds, Cape Evans, Hut Point. <em>Original stores and gear still inside.</em></span>
+          </span>
+        </label>
+
+        <label class="choice-card multi">
+          <input type="checkbox" name="cruise" value="emperors" data-label="Emperor penguin encounters">
+          <span class="choice-inner">
+            <span class="choice-title">Emperor penguins</span>
+            <span class="choice-flavor">Colony visits when ice and season align. <em>Large birds, noisy chicks, long waits worth it.</em></span>
+          </span>
+        </label>
+
+        <label class="choice-card multi">
+          <input type="checkbox" name="cruise" value="whales" data-label="Whale watching & close approaches">
+          <span class="choice-inner">
+            <span class="choice-title">Whale approaches</span>
+            <span class="choice-flavor">Humpbacks and orcas in the floes. <em>Engines off, drift, watch from the Zodiac.</em></span>
+          </span>
+        </label>
+      </div>
+    </div>
+
+    <!-- STEP 3: Book -->
+    <div class="quiz-panel" data-step="2">
+      <p class="quiz-panel-label">Step 3 · Reservation</p>
+      <h2>How do you want to hold a place?</h2>
+      <p class="lead">Waitlist is free. A deposit puts your name on a cabin shortlist.</p>
+
+      <div class="choice-list" style="margin-bottom: 28px;">
+        <label class="choice-card">
+          <input type="radio" name="tier" value="waitlist" checked>
+          <span class="choice-inner">
+            <span class="choice-title">Waitlist ($0)</span>
+            <span class="choice-flavor">Date alerts and programme updates. No payment. <em>We call when a slot opens.</em></span>
+          </span>
+        </label>
+
+        <label class="choice-card">
+          <input type="radio" name="tier" value="soft">
+          <span class="choice-inner">
+            <span class="choice-title">Soft Reserve ($500)</span>
+            <span class="choice-flavor">Refundable deposit. Personal manager from day one. <em>Your name is on the list ahead of waitlist only.</em></span>
+          </span>
+        </label>
+
+        <label class="choice-card">
+          <input type="radio" name="tier" value="hard">
+          <span class="choice-inner">
+            <span class="choice-title">Hard Reserve (15%)</span>
+            <span class="choice-flavor">Price locked, cabin priority, firm place on the manifest. <em>For guests who already know their dates.</em></span>
+          </span>
+        </label>
+      </div>
+
+      <dl class="quiz-summary">
+        <dt>Crossing</dt>
+        <dd id="sum-drake">Not selected</dd>
+        <dt>Your voyage</dt>
+        <dd id="sum-cruise">Not selected</dd>
+        <dt>Reservation</dt>
+        <dd id="sum-tier">Not selected</dd>
+      </dl>
+
+      <div class="field">
+        <label>Full Name</label>
+        <input type="text" name="name" required placeholder="Your name">
+      </div>
+      <div class="field">
+        <label>Email</label>
+        <input type="email" name="email" required placeholder="you@email.com">
+      </div>
+      <div class="field">
+        <label>Phone</label>
+        <input type="tel" name="phone" placeholder="+1 ...">
+      </div>
+      <div class="field">
+        <label>Message</label>
+        <textarea name="message" rows="3" placeholder="Dates, companions, questions..."></textarea>
+      </div>
+    </div>
+
+    <div class="quiz-actions">
+      <button type="button" class="quiz-btn quiz-btn-back" id="btn-back" style="visibility: hidden;">Back</button>
+      <button type="button" class="quiz-btn quiz-btn-next" id="btn-next" disabled>Continue</button>
+    </div>
+  </form>
+  </div>
+</div>
+
+<footer class="quiz-footer">
+  <p>&copy; 2026 Polar Meridian · <a href="the-landing.html" style="color: var(--qz-ice);">The Landing</a> · <a href="booking.html" style="color: var(--qz-ice);">Booking</a> · <a href="index.html" style="color: var(--qz-ice);">Full site</a></p>
+</footer>
+
+<script src="js/booking-quiz.js"></script>
+</body>
+</html>
